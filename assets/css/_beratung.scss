@@ -1,0 +1,126 @@
+///////////////////////////////
+//////////// FAQ  /////////////
+///////////////////////////////
+
+// Variables
+
+// General
+
+#beratungsstellen {
+    .inner {
+        @media #{$tablet} {
+            padding: 15px 25px;
+        }
+    }
+    .vc-collapse {
+        position: relative;
+        border-top: 1px solid $color-grey-light;
+        .title {
+            h3 {
+                margin: 0;
+                font-weight: 700;
+                text-align: left;
+            }
+            .location {
+                margin-bottom: 15px;
+            }
+            .tel {
+                &::before {
+                    display: inline-block;
+                    margin-right: 5px;
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    background: center center no-repeat url(/images/icon-tel.svg);
+                    background-size: contain;
+                }
+            }
+        }
+        .content {
+            .inner {
+                padding-top: 0;
+            }
+            .www {
+                border-bottom: none;
+                &::before {
+                    display: inline-block;
+                    margin-right: 5px;
+                    margin-bottom: -3px;
+                    content: '';
+                    width: 17px;
+                    height: 17px;
+                    background: center center no-repeat url(/images/icon-www.svg);
+                    background-size: contain;
+                }
+            }
+            ul {
+                li {
+                    margin-bottom: 10px;
+                    margin-left: 30px;
+                    line-height: 1.2;
+                    &::before {
+                        width: 25px;
+                        margin-left: -25px;
+                    }
+                }
+            }
+        }
+        &::after {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            display: block;
+            content: '';
+            width: 20px;
+            height: 10px;
+            background: center center no-repeat url(/images/icon-collapse.svg);
+            background-size: contain;
+        }
+        &:last-child {
+            border-bottom: 1px solid $color-grey-light;
+        }
+
+        // Label 24h
+        &#kokon {
+            &::before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: block;
+                content: '';
+                width: 47px;
+                height: 46px;
+                background: center center no-repeat url(/images/label-24h.svg);
+                background-size: contain;
+            }
+        }
+    }
+
+    h2 {
+        margin: 15px 0;
+
+        &::before {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 15px;
+            content: '';
+            width: 31px;
+            height: 43px;
+            background: center center no-repeat url(/images/icon-location.svg);
+            background-size: contain;
+        }
+    }
+    h3 {
+        text-align: center;
+    }
+    ul {
+        text-align: left;
+        li {
+            &::before {
+                color: $color-text;
+                display: inline-block;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+// Variables
+$color-text: #202020;
+$color-main: #11273B;
+$color-red: #F81C58;
+$color-green: #56EDC8;
+$color-grey-light: #D5D5D5;
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              30em; // 480px
+// Small screen / tablet
+$screen-sm-min:              48em; // 768px
+// Medium screen / desktop
+$screen-md-min:              64em; // 1024px
+// Large screen / wide desktop
+$screen-lg-min:              80em; // 1280px
+// So media queries don't overlap when required, provide a maximum
+$screen-xss-max:  ($screen-xs-min - 0.0625em);
+$screen-xs-max:   ($screen-sm-min - 0.0625em);
+$screen-sm-max:   ($screen-md-min - 0.0625em);
+$screen-md-max:   ($screen-lg-min - 0.0625em);
+
+
+//== Media queries
+//
+//## Define your custom media queries.
+$mobile:  "screen and (max-width: #{$screen-xss-max})";
+$narrow:  "screen and (min-width: #{$screen-xs-min})";
+$tablet:  "screen and (min-width: #{$screen-sm-min})";
+$normal:  "screen and (min-width: #{$screen-md-min})";
+$wide:    "screen and (min-width: #{$screen-lg-min})";
+
+// special break for menu items
+$special-break: "screen and (min-width: 640px)";
+
+// Media queries stacked
+$tablet-only:  "screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max})";
+$normal-only:  "screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})";
