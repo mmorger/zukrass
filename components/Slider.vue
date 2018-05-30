@@ -1,18 +1,19 @@
 <template lang="pug">
   section#slider
-    flickity(ref="flickity" options="flickityOptions")
-      div.carousel-cell(v-for="v, index in videos" :key="index")
-        div.video-wrapper
-          iframe(:src="'https://www.youtube.com/embed/' + v.vid + '?showinfo=0'" :frameborder='0' :allowfullscreen='1')
+    no-ssr
+      flickity(ref="flickity" :options="flickityOptions")
+        div.carousel-cell(v-for="v, index in videos" :key="index")
+          div.video-wrapper
+            iframe(:src="'https://www.youtube.com/embed/' + v.vid + '?showinfo=0'" :frameborder='0' :allowfullscreen='1')
 
-        //div.youtube-player(:data-id="v.vid")
-        //img(:src="'images/' + sl.url" class="img-responsive")
-        div.text-wrapper  
-          h1.claim {{ v.claim }}
-          div.emoji
-          //div.logo
-          //img(:src="'images/' + sl.emoji_url" class="emojicon")
-          //img(:src="'images/logo.png'" class="logo")
+          //div.youtube-player(:data-id="v.vid")
+          //img(:src="'images/' + sl.url" class="img-responsive")
+          div.text-wrapper  
+            h1.claim {{ v.claim }}
+            div.emoji
+            //div.logo
+            //img(:src="'images/' + sl.emoji_url" class="emojicon")
+            //img(:src="'images/logo.png'" class="logo")
 
 </template>
 
