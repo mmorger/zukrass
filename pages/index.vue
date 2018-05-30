@@ -1,5 +1,5 @@
 <template lang="pug">
-div.container
+.container
   Slider(:videos="videos")
   Intro
   Beratung(:beratungsstellen="beratungsstellen")
@@ -32,14 +32,14 @@ export default {
 
       ],
       beratungsstellen: [
-        {title: 'Kokon', id:'kokon', location: 'Zürich', tel: '044 545 45 40', url: 'www.kokon-zh.ch', description: ['Kinder und Jugendliche', 'Körperliche, sexuelle oder psychische Gewalt', 'Gewalt zu Hause']},
-        {title: 'OKey&KidsPunkt', id:'okeykids', location: 'Winterthur', tel: '052 245 04 04', url: 'www.okeywinterthur.ch', description: ['Kinder und Jugendliche', 'Körperliche, sexuelle oder psychische Gewalt', 'Gewalt zu Hause']},
-        {title: 'Castagna', id:'castagna', location: 'Zürich', tel: '044 360 90 40', url: 'www.castagna-zh.ch', description: ['Kinder und Jugendliche', 'Frauen und Männer', 'Sexuelle Ausbeutung in der Kindheit und Jugend']},
-        {title: 'Opferberatung Zürich', id:'obzh', location: 'Zürich', tel: '044 299 40 50', url: 'www.obzh.ch', description: ['Kinder und Jugendliche', 'Frauen und Männer', 'Körperliche, sexuelle oder psychische Gewalt', 'Strassenverkehrsopfer', 'Opfer von fürsorgerischen Zwangsmassnahmen und Fremdplatzierungen vor 1981']},
-        {title: 'Kinderschutzgruppe und Opferberatungsstelle des Kinderspitals Zürich', id:'kinderschutzgruppe', location: 'Zürich', tel: '044 266 76 46', url: 'www.kinderschutzgruppe.ch', description: ['Kinder und Jugendliche', 'Körperliche, sexuelle oder psychische Gewalt']},
-        {title: 'BIF Beratungsstelle für Frauen', id:'bif', location: 'Zürich', tel: '044 278 99 99', url: 'www.bif-frauenberatung.ch', description: ['Frauen', 'Körperliche oder psychische Gewalt in der Beziehung oder Ehe']},
-        {title: 'Frauenberatung sexuelle Gewalt', id:'frauenberatung', location: 'Zürich', tel: '044 291 46 46', url: 'www.frauenberatung.ch', description: ['Frauen', 'Körperliche, sexuelle oder psychische Gewalt']},
-        {title: 'Beratungsstelle Frauen-Nottelefon', id:'frauennottelefon', location: 'Winterthur', tel: '052 213 61 61', url: 'www.frauennottelefon.ch', description: ['Frauen', 'Körperliche, sexuelle oder psychische Gewalt']}
+        {title: 'Kokon', id:'kokon', location: 'Zürich', tel: '044 545 45 40', tel_url: '+41445454540', url: 'www.kokon-zh.ch', description: ['Kinder und Jugendliche', 'Körperliche, sexuelle oder psychische Gewalt', 'Gewalt zu Hause']},
+        {title: 'OKey&KidsPunkt', id:'okeykids', location: 'Winterthur', tel: '052 245 04 04', tel_url: '+41522450404', url: 'www.okeywinterthur.ch', description: ['Kinder und Jugendliche', 'Körperliche, sexuelle oder psychische Gewalt', 'Gewalt zu Hause']},
+        {title: 'Castagna', id:'castagna', location: 'Zürich', tel: '044 360 90 40', tel_url: '+41443609040', url: 'www.castagna-zh.ch', description: ['Kinder und Jugendliche', 'Frauen und Männer', 'Sexuelle Ausbeutung in der Kindheit und Jugend']},
+        {title: 'Opferberatung Zürich', id:'obzh', location: 'Zürich', tel: '044 299 40 50', tel_url: '+41442994050', url: 'www.obzh.ch', description: ['Kinder und Jugendliche', 'Frauen und Männer', 'Körperliche, sexuelle oder psychische Gewalt', 'Strassenverkehrsopfer', 'Opfer von fürsorgerischen Zwangsmassnahmen und Fremdplatzierungen vor 1981']},
+        {title: 'Kinderschutzgruppe und Opferberatungsstelle des Kinderspitals Zürich', id:'kinderschutzgruppe', location: 'Zürich', tel: '044 266 76 46', tel_url: '+41442667646', url: 'www.kinderschutzgruppe.ch', description: ['Kinder und Jugendliche', 'Körperliche, sexuelle oder psychische Gewalt']},
+        {title: 'BIF Beratungsstelle für Frauen', id:'bif', location: 'Zürich', tel: '044 278 99 99', tel_url: '+41442789999', url: 'www.bif-frauenberatung.ch', description: ['Frauen', 'Körperliche oder psychische Gewalt in der Beziehung oder Ehe']},
+        {title: 'Frauenberatung sexuelle Gewalt', id:'frauenberatung', location: 'Zürich', tel: '044 291 46 46', tel_url: '+41442914646', url: 'www.frauenberatung.ch', description: ['Frauen', 'Körperliche, sexuelle oder psychische Gewalt']},
+        {title: 'Beratungsstelle Frauen-Nottelefon', id:'frauennottelefon', location: 'Winterthur', tel: '052 213 61 61', tel_url: '+41522136161', url: 'www.frauennottelefon.ch', description: ['Frauen', 'Körperliche, sexuelle oder psychische Gewalt']}
       ],
       faq: [
         {q:'Ist mein Problem wichtig genug, um bei einer Beratungsstelle anzurufen?', 

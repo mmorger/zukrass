@@ -64,17 +64,22 @@
                     }
                 }
             }
-        }
-        &::after {
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            display: block;
-            content: '';
-            width: 20px;
-            height: 10px;
-            background: center center no-repeat url(/images/icon-collapse.svg);
-            background-size: contain;
+            .toggle {
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+                display: block;
+                width: 20px;
+                height: 10px;
+                background: center center no-repeat url(/images/icon-collapse.svg);
+                background-size: contain;
+            }
+            
+            &.v-collapse-content-end {
+                .toggle {
+                    background: center center no-repeat url(/images/icon-collapse.svg);
+                }
+            }
         }
         &:last-child {
             border-bottom: 1px solid $color-grey-light;
