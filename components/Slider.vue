@@ -28,9 +28,12 @@ export default {
         prevNextButtons: true,
         pageDots: true,
         wrapAround: true
-
-        // any options from Flickity can be used
       }
+    }
+  },
+  methods: {
+    vidClick(e) {
+      this.$emit('vidClick', e.target)
     }
   }
 }

@@ -1,10 +1,10 @@
 <template lang="pug">
 .container
-  Slider(:videos="videos")
+  Slider(:videos="videos" @vidClick="vidClick($event)")
   Intro
   Beratung(:beratungsstellen="beratungsstellen")
   Faq(:faq="faq")
-  Videos(:videos="videos")
+  Videos(:videos="videos" @vidClick="vidClick($event)")
   div.footer.inner
     nuxt-link(to="impressum" class="about") Über die Kampagne
 
@@ -91,8 +91,42 @@ export default {
     Beratung,
     Faq,
     Videos
+  },
+  computed: {
+    vids() {
+      return document.getElementsByClassName("youtube-player")
+    }
+  },
+  methods: {
+    vidClick(e) {
+      let iframe = document.createElement("iframe")
+      let embed = "https://www.youtube.com/embed/ID?autoplay=1&showinfo=0"
+      iframe.setAttribute("src", embed.replace("ID", e.dataset.id))
+      iframe.setAttribute("frameborder", "0")
+      iframe.setAttribute("allowfullscreen", "1")
+      e.parentNode.parentNode.replaceChild(iframe, e.parentNode)
+    },
+    labnolThumb(id) {
+      let thumb = '<img data-id="'+id+'" src="https://i.ytimg.com/vi/ID/hqdefault.jpg">'
+      let play = '<div class="play" data-id="'+ id +'"></div>'
+      return thumb.replace("ID", id) + play
+    },
+    getVids() {
+      setTimeout(() => {
+        for (let i = 0; i < this.vids.length; i++) {
+          console.log(this.vids[i]); //second console output
+          const div = document.createElement("div")
+          div.setAttribute("data-id", this.vids[i].dataset.id)
+          div.innerHTML = this.labnolThumb(this.vids[i].dataset.id)
+          this.vids[i].appendChild(div)
+        }
+      }, 1000);
+    }
+  },  
+  mounted() {
+    this.getVids()
   }
-};
+}
 </script>
 
 <style>
