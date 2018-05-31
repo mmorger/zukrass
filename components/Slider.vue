@@ -4,7 +4,7 @@
       flickity(ref="flickity" :options="flickityOptions")
         div.carousel-cell(v-for="v, index in videos" :key="index")
           div.video-wrapper
-            iframe(:src="'https://www.youtube.com/embed/' + v.vid + '?showinfo=0'" :frameborder='0' :allowfullscreen='1')
+            iframe(:src="'https://www.youtube.com/embed/' + v.vid + '?modestbranding=1&showinfo=0&rel=0&ytp-pause-overlay=0&controls=0'" :frameborder='0' :allowfullscreen='1')
 
           //div.youtube-player(:data-id="v.vid")
           //img(:src="'images/' + sl.url" class="img-responsive")
