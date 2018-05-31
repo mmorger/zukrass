@@ -5,34 +5,62 @@
 // Variables
 
 #slider {
+    position: relative;
     background-color: $color-main;
     // Video Styles located in _videos.scss
 
     .text-wrapper {
         padding: 0 15px;
     }
-    .claim {
-        margin-top: 10px;
-        
-    }
     .emoji {
+        position: absolute;
         display: block;
+        margin-top: -20px;
         width: 100%;
-        height: 12vw;
-        max-height: 60px;
-        background: top right no-repeat url(/images/emoji-1.png);
+        height: 38px;
+        background: top left no-repeat url(/images/emoji-1.png);
         background-size: contain;
+
+        @media #{$tablet} {
+            margin-top: -30px;
+            height: 50px;
+        }
+        @media #{$normal} {
+            margin-top: -30px;
+            height: 12vw;
+            max-height: 60px;
+        }
+
+    }
+    .claim {
+        padding-top: 25px;
     }
     .logo {
+        position: absolute;
         display: block;
-        width: 100%;
-        height: 12vw;
-        max-height: 60px;
-        background: top right no-repeat url(/images/logo.png);
+        right: 7.5px;
+        bottom: 25px;
+        width: 50vw;
+        height: 30vw;
+        max-width: 250px;
+        max-height: 140px;
+        background: top right no-repeat url(/images/logo-zukrass.png);
         background-size: contain;
+        transition: none;
+
+        @media #{$normal} {
+            bottom: 20px;
+        }
+        &:hover {
+            opacity: 1;
+        }
+        span {
+            display: none;
+        }
     }
 
     .flickity-enabled {
+        position: relative;
         .flickity-viewport {
         //height: 90vh !important;
         }
@@ -40,7 +68,7 @@
         .carousel-cell {
             width: 100%;
             height: 90vh;
-            max-height: 450px;
+            max-height: 550px;
             background-color: $color-main;
 
             @media #{$tablet} {
@@ -53,14 +81,24 @@
 
         .flickity-button {
             display: none;
-        /*
-            &.previous {
-    
+            background: none;
+
+            @media #{$normal} {
+                display: block;
+                top: 22%;
+
+                &.previous {
+                    left: -50px;
+        
+                }
+                &.next {
+                    right: -50px;
+                }
             }
-            &.next {
-                
+            .flickity-button-icon {
+                fill: #999;
             }
-            */
+
         }
         ol.flickity-page-dots {
             position: relative;

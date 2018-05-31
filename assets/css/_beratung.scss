@@ -12,78 +12,91 @@
             padding: 15px 25px;
         }
     }
-    .vc-collapse {
+    .collapse {
         position: relative;
-        border-top: 1px solid $color-grey-light;
-        .title {
-            h3 {
-                margin: 0;
-                font-weight: 700;
-                text-align: left;
-            }
-            .location {
-                margin-bottom: 15px;
-            }
-            .tel {
-                &::before {
-                    display: inline-block;
-                    margin-right: 5px;
-                    content: '';
-                    width: 15px;
-                    height: 15px;
-                    background: center center no-repeat url(/images/icon-tel.svg);
-                    background-size: contain;
+
+        .vc-collapse {
+            border-top: 1px solid $color-grey-light;
+            .title {
+                h3 {
+                    margin: 0;
+                    font-weight: 700;
+                    text-align: left;
                 }
-            }
-        }
-        .content {
-            .inner {
-                padding-top: 0;
-            }
-            .www {
-                border-bottom: none;
-                &::before {
-                    display: inline-block;
-                    margin-right: 5px;
-                    margin-bottom: -3px;
-                    content: '';
-                    width: 17px;
-                    height: 17px;
-                    background: center center no-repeat url(/images/icon-www.svg);
-                    background-size: contain;
+                .location {
+                    margin-bottom: 15px;
                 }
-            }
-            ul {
-                li {
-                    margin-bottom: 10px;
-                    margin-left: 30px;
-                    line-height: 1.2;
+                .tel {
                     &::before {
-                        width: 25px;
-                        margin-left: -25px;
+                        display: inline-block;
+                        margin-right: 5px;
+                        content: '';
+                        width: 15px;
+                        height: 15px;
+                        background: center center no-repeat url(/images/icon-tel.svg);
+                        background-size: contain;
                     }
                 }
             }
-            .toggle {
-                position: absolute;
-                bottom: 15px;
-                right: 15px;
-                display: block;
-                width: 20px;
-                height: 10px;
-                background: center center no-repeat url(/images/icon-collapse.svg);
-                background-size: contain;
-            }
-            
-            &.v-collapse-content-end {
-                .toggle {
-                    background: center center no-repeat url(/images/icon-collapse.svg);
+            .content {
+                .inner {
+                    padding-top: 0;
+                }
+                .www {
+                    border-bottom: none;
+                    &::before {
+                        display: inline-block;
+                        margin-right: 5px;
+                        margin-bottom: -3px;
+                        content: '';
+                        width: 17px;
+                        height: 17px;
+                        background: center center no-repeat url(/images/icon-www.svg);
+                        background-size: contain;
+                    }
+                }
+                ul {
+                    li {
+                        margin-bottom: 10px;
+                        margin-left: 30px;
+                        line-height: 1.2;
+                        &::before {
+                            width: 25px;
+                            margin-left: -25px;
+                        }
+                    }
                 }
             }
+            &:last-child {
+                border-bottom: 1px solid $color-grey-light;
+            }
         }
-        &:last-child {
-            border-bottom: 1px solid $color-grey-light;
+        .v-collapse-toggler {
+            @media #{$normal} {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            
         }
+
+        .toggle {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            display: block;
+            width: 20px;
+            height: 10px;
+            background: center center no-repeat url(/images/icon-collapse.svg);
+            background-size: contain;
+        }
+        /*
+        &.v-collapse-content-end {
+            .toggle {
+                background: center center no-repeat url(/images/icon-collapse.svg);
+            }
+        }
+        */
 
         // Label 24h
         &#kokon {
@@ -100,6 +113,7 @@
             }
         }
     }
+    
 
     h2 {
         margin: 15px 0;
