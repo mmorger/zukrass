@@ -4,8 +4,7 @@
       flickity(ref="flickity" :options="flickityOptions")
         div.carousel-cell(v-for="v, index in videos" :key="index")
           div.video-wrapper
-            iframe(:src="'https://www.youtube.com/embed/' + v.vid + '?showinfo=0'" :frameborder='0' :allowfullscreen='1')
-
+            .youtube-player(:data-id="v.vid" @click="vidClick($event)" :ref="v.vid")
           //div.youtube-player(:data-id="v.vid")
           //img(:src="'images/' + sl.url" class="img-responsive")
           div.text-wrapper  
@@ -28,9 +27,12 @@ export default {
         prevNextButtons: true,
         pageDots: true,
         wrapAround: true
-
-        // any options from Flickity can be used
       }
+    }
+  },
+  methods: {
+    vidClick(e) {
+      this.$emit('vidClick', e.target)
     }
   }
 }
