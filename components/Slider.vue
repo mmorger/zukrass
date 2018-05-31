@@ -5,8 +5,6 @@
         div.carousel-cell(v-for="v, index in videos" :key="index")
           div.video-wrapper
             .youtube-player(:data-id="v.vid" @click="vidClick($event)" :ref="v.vid")
-          //div.youtube-player(:data-id="v.vid")
-          //img(:src="'images/' + sl.url" class="img-responsive")
           div.text-wrapper  
             div.emoji
             h1.claim {{ v.claim }}
