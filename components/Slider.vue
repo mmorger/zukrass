@@ -9,12 +9,12 @@
           //div.youtube-player(:data-id="v.vid")
           //img(:src="'images/' + sl.url" class="img-responsive")
           div.text-wrapper  
-            h1.claim {{ v.claim }}
             div.emoji
+            h1.claim {{ v.claim }}
             //div.logo
             //img(:src="'images/' + sl.emoji_url" class="emojicon")
             //img(:src="'images/logo.png'" class="logo")
-
+    a(v-bind:href="'/'" class="logo") #[span zu krass!]
 </template>
 
 <script>
@@ -24,9 +24,9 @@ export default {
   data () {
     return {
       flickityOptions: {
-        initialIndex: 3,
-        prevNextButtons: false,
-        pageDots: false,
+        initialIndex: 0,
+        prevNextButtons: true,
+        pageDots: true,
         wrapAround: true
 
         // any options from Flickity can be used

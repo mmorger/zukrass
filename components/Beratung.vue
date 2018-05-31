@@ -4,17 +4,19 @@
       div.inner
         h2 Beratungsstellen
         h3 Ruf uns an oder komm bei uns vorbei.
-      v-collapse-wrapper(v-for="bs, index in beratungsstellen" :key="index" :id="bs.id")
-          .title(v-collapse-toggle)
-            div.inner
-              h3 {{ bs.title }}
+      div.collapse(v-for="bs, index in beratungsstellen" :key="index" :id="bs.id")  
+        v-collapse-wrapper(:ref="bs.id" :active="true")
+            .title(v-collapse-toggle)
+              div.inner
+                h3 {{ bs.title }}
                 p.location {{ bs.location }}
-                p.tel {{ bs.tel }}
-          .content(v-collapse-content)
-            div.inner
-              a(v-bind:href="'http://' + bs.url" class="www" target="_blank") {{ bs.url }}
-              ul
-                li(v-for="item in bs.description") {{ item }}
+                a(v-bind:href="'tel:' + bs.tel_url" class="tel") {{ bs.tel }}
+            .content(v-collapse-content)
+              div.inner
+                a(v-bind:href="'http://' + bs.url" class="www" target="_blank") {{ bs.url }}
+                ul
+                  li(v-for="item in bs.description") {{ item }}
+        div.toggle(:v-collapse-toggle="bs.id")      
 </template>
 
 <script>
