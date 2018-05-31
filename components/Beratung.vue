@@ -5,7 +5,7 @@
         h2 Beratungsstellen
         h3 Ruf uns an oder komm bei uns vorbei.
       div.collapse(v-for="bs, index in beratungsstellen" :key="index" :id="bs.id")  
-        v-collapse-wrapper(:ref="bs.id" :active="true")
+        v-collapse-wrapper(:ref="bs.id" v-on:afterClose="handleBoxClose($event, index)" v-on:afterOpen="handleBoxOpen($event, index)" :class="{ active: openBox === index}")
             .title(v-collapse-toggle)
               div.inner
                 h3 {{ bs.title }}
@@ -22,6 +22,23 @@
 <script>
 
 export default {
-  props: ["beratungsstellen"]
+  props: ["beratungsstellen"],
+  data () {
+    return {
+      openBox: null
+    }
+  },
+  methods: {
+    handleBoxOpen(e, index) {
+      console.log('my index', e.status, index);
+      this.$nextTick(() => {
+        this.openBox = index
+      })
+    },
+    handleBoxClose(e, index) {
+      console.log('my index', e.status, index);
+      this.openBox = null
+    }
+  }
 }
 </script>
