@@ -100,7 +100,7 @@ export default {
   methods: {
     vidClick(e) {
       let iframe = document.createElement("iframe")
-      let embed = "https://www.youtube.com/embed/ID?autoplay=1&showinfo=0"
+      let embed = "https://www.youtube.com/embed/ID?autoplay=1&showinfo=0&rel=0&ytp-pause-overlay=0"
       iframe.setAttribute("src", embed.replace("ID", e.dataset.id))
       iframe.setAttribute("frameborder", "0")
       iframe.setAttribute("allowfullscreen", "1")

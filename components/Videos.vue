@@ -5,6 +5,9 @@
       div.video-container(v-for="v, index in videos" :key="index")
         .youtube-player(:data-id="v.vid" @click="vidClick($event)" :ref="v.vid")
         h1 {{ v.claim }}
+        .share
+          a(v-bind:href="''" class="button-share")
+          
         
 </template>
 

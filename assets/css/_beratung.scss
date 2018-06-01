@@ -1,5 +1,5 @@
 ///////////////////////////////
-//////////// FAQ  /////////////
+////// Beratungsstellen  //////
 ///////////////////////////////
 
 // Variables
@@ -27,7 +27,10 @@
                     text-align: left;
                 }
                 .location {
-                    margin-bottom: 15px;
+                    margin-bottom: 5px;
+                    @media #{$normal} {
+                        margin-bottom: 15px;
+                    }
                 }
                 .tel {
                     &::before {
