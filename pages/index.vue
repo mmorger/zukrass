@@ -25,10 +25,10 @@ export default {
         {url: 'image.jpg', claim: 'Achtung, Seife', emoji_url: 'emoji-1.png'}
       ],
       videos: [
-        {vid: 'Ihk66LtCLvc', url: 'image.jpg', claim: 'Min Fründ und ich hends supi... solang ich nüd falsch mache', emoji_url: 'emoji-1.png'},
-        {vid: 'Dnqc-nzrpqI', url: 'image.jpg', claim: 'Min Trainer betreut mich au unter de Duschi', emoji_url: 'emoji-1.png'},
-        {vid: 'Ihk66LtCLvc', url: 'image.jpg', claim: 'Usgang isch mega cool... lernsch immer neui Lüt kenne', emoji_url: 'emoji-1.png'},
-        {vid: 'Dnqc-nzrpqI', url: 'image.jpg', claim: 'Min Vater macht mega villi im huushalt... meischtens vill kabutt', emoji_url: 'emoji-1.png'}
+        {vid: 'Ihk66LtCLvc', url: 'image.jpg', claim: 'Min Fründ und ich hends super... solang ich nüd falsch mache', emoji_url: 'emoji_beziehung.png'},
+        {vid: 'Dnqc-nzrpqI', url: 'image.jpg', claim: 'Min Trainer betreut mich au no unter de Duschi', emoji_url: 'emoji_dusche.png'},
+        {vid: 'Ihk66LtCLvc', url: 'image.jpg', claim: 'Usgang isch mega cool... lernsch immer neui Lüt kenne', emoji_url: 'emoji_ausgang.png'},
+        {vid: 'Dnqc-nzrpqI', url: 'image.jpg', claim: 'Min Vater macht mega villi im Huushalt... meischtens vill kaputt', emoji_url: 'emoji_familie.png'}
 
       ],
       beratungsstellen: [
@@ -68,10 +68,6 @@ export default {
         a: [
         'Nein, Du musst keine Strafanzeige machen, um uns anzurufen.', 
         'Wir hören Dir zu und suchen mit Dir zusammen nach Lösungen.']},
-        {q:'Muss ich eine Strafanzeige machen, um mich bei euch zu melden?', 
-        a: [
-        'Nein, Du musst keine Strafanzeige machen, um uns anzurufen.', 
-        'Wir hören Dir zu und suchen mit Dir zusammen nach Lösungen.']},
         {q:'Kann ich auch für eine Freundin oder einen Freund anrufen?', 
         a: [
         'Ja, klar kannst Du das!', 
@@ -100,7 +96,7 @@ export default {
   methods: {
     vidClick(e) {
       let iframe = document.createElement("iframe")
-      let embed = "https://www.youtube.com/embed/ID?autoplay=1&showinfo=0&rel=0&ytp-pause-overlay=0"
+      let embed = "https://www.youtube.com/embed/ID?autoplay=1&showinfo=0&controls=0&rel=0&ytp-pause-overlay=0"
       iframe.setAttribute("src", embed.replace("ID", e.dataset.id))
       iframe.setAttribute("frameborder", "0")
       iframe.setAttribute("allowfullscreen", "1")

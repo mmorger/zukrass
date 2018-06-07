@@ -3,7 +3,7 @@
     section#faq
         div.inner
           h2 Antworten auf Deine Fragen
-        v-collapse-wrapper(v-for="qa, index in faq" :key="index")
+        v-collapse-wrapper(v-for="qa, index in faq" :key="index" v-on:afterClose="handleBoxClose(index)" v-on:afterOpen="handleBoxOpen(index)" :class="{ active: openBox === index}")
           h3.title(v-collapse-toggle) {{ qa.q }}
           .content(v-collapse-content) 
             ul
@@ -13,6 +13,21 @@
 <script>
 
 export default {
-  props: ["faq"]
+  props: ["faq"],
+  data () {
+    return {
+      openBox: null
+    }
+  },
+  methods: {
+    handleBoxOpen(index) {
+      this.$nextTick(() => {
+        this.openBox = index
+      })
+    },
+    handleBoxClose(index) {
+      this.openBox = null
+    }
+  }
 }
 </script>

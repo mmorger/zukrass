@@ -7,11 +7,9 @@
             .youtube-player(:data-id="v.vid" @click="vidClick($event)" :ref="v.vid")
           div.text-wrapper  
             div.emoji
+              img.img-responsive(:src="'/images/' + v.emoji_url")
             h1.claim {{ v.claim }}
-            //div.logo
-            //img(:src="'images/' + sl.emoji_url" class="emojicon")
-            //img(:src="'images/logo.png'" class="logo")
-    a(v-bind:href="'/'" class="logo") #[span zu krass!]
+    div.logo
 </template>
 
 <script>

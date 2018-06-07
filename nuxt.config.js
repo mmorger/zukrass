@@ -44,7 +44,7 @@ module.exports = {
   },
   plugins: [
     { src: '~plugins/collapse', ssr: false},
-    { src: '~/plugins/flickity', ssr: false }
-    //{ src: '~/plugins/youtube-player', ssr: false }
+    { src: '~/plugins/flickity', ssr: false },
+    { src: '~plugins/ga.js', ssr: false }
   ]
 }

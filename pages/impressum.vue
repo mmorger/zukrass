@@ -2,17 +2,19 @@
 #impressum
   .container
     div.inner
-      h2 Über die Kampagne #zukrass
+      h2 Über die Kampagne
+      nuxt-link(to="/" class="logo")
       h3 Impressum
       ul
         li Kanton Zürich, Direktion der Justiz und des Innern
         li Kantonale Opferhilfestelle
         li 
-          a(href='http://www.opferhilfe.zh.ch') www.opferhilfe.zh.ch 
-        li 
           a(href='mailto:kantonale.opferhilfestelle@ji.zh.ch') kantonale.opferhilfestelle@ji.zh.ch
-      a 
-        nuxt-link(to="/") Zurück
+        li 
+          a(href='http://www.opferhilfe.zh.ch') www.opferhilfe.zh.ch       
+        
+      .div.footer.inner
+        nuxt-link(to="/" class="back") Zurück
 </template>
 
 <script>
