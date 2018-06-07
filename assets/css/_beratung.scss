@@ -4,72 +4,82 @@
 
 // Variables
 
+$border-active: 10px;
+
+
 // General
 
 #beratungsstellen {
     .inner {
-        @media #{$tablet} {
-            padding: 15px 25px;
+        padding: 25px;
+    }
+    .collapse-wrapper {
+        &:last-child {
+            border-bottom: 1px solid $color-grey-light;
         }
     }
-    &:last-child {
-        //border-bottom: 1px solid $color-grey-light;
-    }
-    .collapse {
+    .vc-collapse {
         position: relative;
+        border-top: 1px solid $color-grey-light;
+        border-left: $border-active solid white;
+        transition: all 0.2s ease-in-out;
 
-        .vc-collapse {
-            border-top: 1px solid $color-grey-light;
-            .title {
-                h3 {
-                    margin: 0;
-                    font-weight: 700;
-                    text-align: left;
-                }
-                .location {
-                    margin-bottom: 5px;
-                    @media #{$normal} {
-                        margin-bottom: 15px;
-                    }
-                }
-                .tel {
-                    &::before {
-                        display: inline-block;
-                        margin-right: 5px;
-                        content: '';
-                        width: 15px;
-                        height: 15px;
-                        background: center center no-repeat url(/images/icon-tel.svg);
-                        background-size: contain;
-                    }
+        .inner {
+            padding: 10px 25px 10px 17px;
+            @media #{$tablet} {
+                padding: 15px 25px 15px 17px;
+            }
+        }
+
+        .title {
+            h3 {
+                margin: 0;
+                font-weight: 700;
+                text-align: left;
+            }
+            .location {
+                margin-bottom: 5px;
+                @media #{$normal} {
+                    margin-bottom: 15px;
                 }
             }
-            .content {
-                .inner {
-                    padding-top: 0;
+            .tel {
+                &::before {
+                    display: inline-block;
+                    margin-right: 5px;
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    background: center center no-repeat url(/images/icon-tel.svg);
+                    background-size: contain;
                 }
-                .www {
-                    border-bottom: none;
+            }
+        }
+        .content {
+            .inner {
+                padding-top: 0;
+            }
+            .www {
+                border-bottom: none;
+                &::before {
+                    display: inline-block;
+                    margin-right: 5px;
+                    margin-bottom: -3px;
+                    content: '';
+                    width: 17px;
+                    height: 17px;
+                    background: center center no-repeat url(/images/icon-www.svg);
+                    background-size: contain;
+                }
+            }
+            ul {
+                li {
+                    margin-bottom: 10px;
+                    margin-left: 30px;
+                    line-height: 1.3;
                     &::before {
-                        display: inline-block;
-                        margin-right: 5px;
-                        margin-bottom: -3px;
-                        content: '';
-                        width: 17px;
-                        height: 17px;
-                        background: center center no-repeat url(/images/icon-www.svg);
-                        background-size: contain;
-                    }
-                }
-                ul {
-                    li {
-                        margin-bottom: 10px;
-                        margin-left: 30px;
-                        line-height: 1.2;
-                        &::before {
-                            width: 25px;
-                            margin-left: -25px;
-                        }
+                        width: 25px;
+                        margin-left: -25px;
                     }
                 }
             }
@@ -88,34 +98,57 @@
             right: 15px;
             display: block;
             width: 20px;
-            height: 10px;
+            height: 20px;
             background: center center no-repeat url(/images/icon-collapse.svg);
             background-size: contain;
         }
-        /*
-        &.v-collapse-content-end {
+        
+        &.active {
+            border-left: $border-active solid $color-green;
+
+            .title {
+                h3 {
+                    color: $color-green;
+                }
+                color: $color-green;
+            }
+
             .toggle {
-                background: center center no-repeat url(/images/icon-collapse.svg);
+                background: center center no-repeat url(/images/icon-collapse-close.svg);
             }
         }
-        */
-
-        // Label 24h
-        &#kokon {
-            &::before {
-                position: absolute;
-                top: 0;
-                right: 0;
-                display: block;
-                content: '';
-                width: 47px;
-                height: 46px;
-                background: center center no-repeat url(/images/label-24h.svg);
-                background-size: contain;
+        &:not(.active) {
+            @media #{$normal} {
+                &:hover {
+                   background-color: rgba(86, 237, 200, 0.1);
+                   border-left-color: rgba(86, 237, 200, 0.1);
+                }
             }
         }
     }
-    
+    /*
+    &.v-collapse-content-end {
+        .toggle {
+            background: center center no-repeat url(/images/icon-collapse.svg);
+        }
+    }
+    */
+
+    // Label 24h
+    &#kokon {
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            content: '';
+            width: 47px;
+            height: 46px;
+            background: center center no-repeat url(/images/label-24h.svg);
+            background-size: contain;
+        }
+    }
+
 
     h2 {
         margin: 15px 0;

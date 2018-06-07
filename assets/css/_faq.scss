@@ -6,10 +6,30 @@
 
 // General
 #faq {
+    h2 {
+        margin: 15px 0;
+
+        &::before {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 15px;
+            content: '';
+            width: 50px;
+            height: 50px;
+            background: center center no-repeat url(/images/icon-faq.png);
+            background-size: contain;
+        }
+    }
     .vc-collapse {
         //margin-bottom: 15px;
         padding: 15px 15px 15px 7px;
-        border-left: 8px solid $color-green;
+        border-left: $border-active solid white;
+        transition: border-color 0.3s ease-in-out;
+
+        @media #{$normal} {
+            padding-bottom: 35px;
+        }
         
         h3.title.v-collapse-toggler {
             margin: 0 auto;
@@ -23,15 +43,15 @@
                 font-size: 34px;
                 font-weight: 500;
                 line-height: 0.8;
+                transition: all 0.2s ease-in-out;
             }
             @media #{$normal} {
-                transition: all 0.1s ease-in-out;
+                transition: all 0.2s ease-in-out;
                 &:hover {
                     color: $color-green;
                     cursor: pointer;
 
                     &::before {
-                        transition: all 0.1s ease-in-out;
                         transform: scale(-1, 1);
                         color: $color-green;
                     }
@@ -54,6 +74,17 @@
                 }
             }
 
+        }
+        &.active {
+            border-left: $border-active solid $color-green;
+            h3.title.v-collapse-toggler {
+                color: $color-green;
+
+                &::before {
+                    transform: scale(-1, 1);
+                    color: $color-green;
+                }
+            }
         }
     }
 }

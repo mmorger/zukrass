@@ -40,7 +40,7 @@ h3 {
     color: $color-text;
     font-family: $text-font;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 17px;
     @media #{$tablet} {
         font-size: 20px;
     }
@@ -108,12 +108,19 @@ ul {
     background: $color-green;
     display: flex;
     justify-content: center;
+    .inner {
+        padding: 15px 0;
+    }
     .wrapper {
         display: flex;
         justify-content: center;
         padding-bottom: 25px;
         .item {
             padding: 10px;
+
+            @media #{$normal} {
+                padding: 15px;
+            }
         }
         .icon {
             display: block;
@@ -145,8 +152,6 @@ ul {
     display: inline-block;
     text-align: center;
 
-    .about {
-    }
 }
 
 
@@ -168,7 +173,27 @@ ul {
 }
 
 #impressum {
+    h2 {
+        margin-bottom: 0;
+    }
+    .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50vw;
+        height: 28vw;
+        background: center center no-repeat url(/images/logo-zukrass.png);
+        background-size: contain;
+        @media #{$tablet} {
+            width: 250px;
+            height: 140px;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
     ul {
+        margin-bottom: 50px;
         text-align: left;
         li {
             &::before {
