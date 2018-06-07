@@ -12,3 +12,5 @@ dist
 
 # VSCode Settings
 .vscode
+
+DS._Store
