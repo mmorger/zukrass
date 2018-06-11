@@ -45,6 +45,7 @@ module.exports = {
   plugins: [
     { src: '~plugins/collapse', ssr: false},
     { src: '~/plugins/flickity', ssr: false },
-    { src: '~plugins/ga.js', ssr: false }
+    { src: '~/plugins/v-clipboard', ssr: false },
+    { src: '~plugins/vue-analytics.js', ssr: false }
   ]
 }

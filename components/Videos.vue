@@ -6,7 +6,7 @@
         .youtube-player(:data-id="v.vid" @click="vidClick($event)" :ref="v.vid")
         h1 {{ v.claim }}
         .share
-          a(v-bind:href="''" class="button-share")
+          button(:v-clipboard="'https://www.youtube.com/watch?v=' + v.vid", v-clipboard:success="clipboardSuccessHandler", v-clipboard:error="clipboardErrorHandler" class="button-share")
           
         
 </template>
@@ -17,6 +17,13 @@ export default {
   methods: {
     vidClick(e) {
       this.$emit('vidClick', e.target)
+    },
+    clipboardSuccessHandler ({ value, event }) {
+      console.log('success', value)
+    },
+
+    clipboardErrorHandler ({ value, event }) {
+      console.log('error', value)
     }
   }
 }

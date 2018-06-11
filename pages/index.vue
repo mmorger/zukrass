@@ -110,7 +110,7 @@ export default {
     getVids() {
       setTimeout(() => {
         for (let i = 0; i < this.vids.length; i++) {
-          console.log(this.vids[i]); //second console output
+          //console.log(this.vids[i]); //second console output
           const div = document.createElement("div")
           div.setAttribute("data-id", this.vids[i].dataset.id)
           div.innerHTML = this.labnolThumb(this.vids[i].dataset.id)
