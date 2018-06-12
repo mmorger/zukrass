@@ -20,15 +20,11 @@ import Videos from "~/components/Videos.vue";
 export default {
   data() {
     return {
-      slides: [
-        {url: 'image.jpg', claim: 'Betreut dich dein Trainer auch unter der Dusche?', emoji_url: 'emoji-1.png'},
-        {url: 'image.jpg', claim: 'Achtung, Seife', emoji_url: 'emoji-1.png'}
-      ],
       videos: [
-        {vid: 'Ihk66LtCLvc', url: 'image.jpg', claim: 'Min Fründ und ich hends super... solang ich nüd falsch mache', emoji_url: 'emoji_beziehung.png'},
-        {vid: 'Dnqc-nzrpqI', url: 'image.jpg', claim: 'Min Trainer betreut mich au no unter de Duschi', emoji_url: 'emoji_dusche.png'},
-        {vid: 'Ihk66LtCLvc', url: 'image.jpg', claim: 'Usgang isch mega cool... lernsch immer neui Lüt kenne', emoji_url: 'emoji_ausgang.png'},
-        {vid: 'Dnqc-nzrpqI', url: 'image.jpg', claim: 'Min Vater macht mega villi im Huushalt... meischtens vill kaputt', emoji_url: 'emoji_familie.png'}
+        {vid: 'K-n2nVjIzv8', url: 'image.jpg', claim: 'Min Fründ und ich hends super... solang ich nüd falsch mache', emoji_url: 'emoji_beziehung.png'},
+        {vid: '2YX9OH751qM', url: 'image.jpg', claim: 'Min Trainer betreut mich au no unter de Duschi', emoji_url: 'emoji_dusche.png'},
+        {vid: 'gqKBhXK6mus', url: 'image.jpg', claim: 'Usgang isch mega cool... lernsch immer neui Lüt kenne', emoji_url: 'emoji_ausgang.png'},
+        {vid: 'loOqgyTIdwo', url: 'image.jpg', claim: 'Min Vater macht mega villi im Huushalt... meischtens vill kaputt', emoji_url: 'emoji_familie.png'}
 
       ],
       beratungsstellen: [
