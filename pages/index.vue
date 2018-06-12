@@ -21,7 +21,7 @@ export default {
   data() {
     return {
       videos: [
-        {vid: 'K-n2nVjIzv8', url: 'image.jpg', claim: 'Min Fründ und ich hends super... solang ich nüd falsch mache', emoji_url: 'emoji_beziehung.png'},
+        {vid: 'K-n2nVjIzv8', url: 'image.jpg', claim: 'Min Fründ und ich händs super... solang ich nüt falsch mache', emoji_url: 'emoji_beziehung.png'},
         {vid: '2YX9OH751qM', url: 'image.jpg', claim: 'Min Trainer betreut mich au no unter de Duschi', emoji_url: 'emoji_dusche.png'},
         {vid: 'gqKBhXK6mus', url: 'image.jpg', claim: 'Usgang isch mega cool... lernsch immer neui Lüt kenne', emoji_url: 'emoji_ausgang.png'},
         {vid: 'loOqgyTIdwo', url: 'image.jpg', claim: 'Min Vater macht mega villi im Huushalt... meischtens vill kaputt', emoji_url: 'emoji_familie.png'}
