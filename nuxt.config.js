@@ -12,6 +12,9 @@ module.exports = {
       { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
       { name: 'theme-color', content: '#ffffff' }
     ],
+    script: [
+      { src: 'https://cdn.polyfill.io/v2/polyfill.min.js' }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', type: 'image/x-icon', href: '/favicon.png' },
