@@ -13,7 +13,7 @@ module.exports = {
       { name: 'theme-color', content: '#ffffff' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', type: 'image/x-icon', href: '/favicon.png' },
       { rel: 'apple-touch-icon', sizes: '57x57', href: '/apple-icon-57x57.png' },
       { rel: 'apple-touch-icon', sizes: '60x60', href: '/apple-icon-60x60.png' },
@@ -64,7 +64,8 @@ module.exports = {
     { src: '~plugins/collapse', ssr: false},
     { src: '~/plugins/flickity', ssr: false },
     { src: '~/plugins/v-clipboard', ssr: false },
-    { src: '~plugins/ga.js', ssr: false }
+    { src: '~plugins/ga.js', ssr: false },
+    { src: '~plugins/es6promise.js', ssr: false }
     //{ src: '~plugins/vue-analytics.js', ssr: false }
   ]
 }
