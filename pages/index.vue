@@ -6,7 +6,11 @@
   Faq(:faq="faq")
   Videos(:videos="videos" @vidClick="vidClick($event)")
   div.footer.inner
-    nuxt-link(to="impressum" class="about") Über die Kampagne
+    ul
+      li 
+        a(v-bind:href="'https://www.youtube.com/channel/UCi8qR7Zub16b7jhC6fSJmgQ/videos?disable_polymer=1'" target="_blank") Zum Youtube-Kanal
+      li
+        nuxt-link(to="impressum" class="about") Über die Kampagne
 
 </template>
 
@@ -24,7 +28,7 @@ export default {
         {vid: 'K-n2nVjIzv8', url: 'image.jpg', claim: 'Min Fründ und ich händs super... solang ich nüt falsch mache', emoji_url: 'emoji_beziehung.png'},
         {vid: '2YX9OH751qM', url: 'image.jpg', claim: 'Min Trainer betreut mich au no unter de Duschi', emoji_url: 'emoji_dusche.png'},
         {vid: 'gqKBhXK6mus', url: 'image.jpg', claim: 'Usgang isch mega cool... lernsch immer neui Lüt kenne', emoji_url: 'emoji_ausgang.png'},
-        {vid: 'loOqgyTIdwo', url: 'image.jpg', claim: 'Min Vater macht mega villi im Huushalt... meischtens vill kaputt', emoji_url: 'emoji_familie.png'}
+        {vid: 'loOqgyTIdwo', url: 'image.jpg', claim: 'Min Vater macht mega vill im Huushalt... meischtens vill kaputt', emoji_url: 'emoji_familie.png'}
 
       ],
       beratungsstellen: [

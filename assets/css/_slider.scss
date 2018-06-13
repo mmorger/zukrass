@@ -11,6 +11,10 @@
 
     .text-wrapper {
         padding: 0 15px;
+
+        @media #{$normal} {
+            padding: 0 60px;
+        }
     }
     .emoji {
         position: absolute;

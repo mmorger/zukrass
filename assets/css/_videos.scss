@@ -47,6 +47,14 @@
                 height: 15px;
                 background: center center no-repeat url(/images/icon-share.svg);
                 background-size: contain;
+                border: 0;
+                &:hover {
+                    cursor: pointer;
+                }
+                &:focus {
+                    border: 0;
+                    outline: none;
+                }
             }
         }
         .youtube-player {

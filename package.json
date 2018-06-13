@@ -13,6 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "es6-promise": "^4.2.4",
     "node-sass": "^4.9.0",
     "nuxt": "^1.0.0",
     "pug": "^2.0.3",
