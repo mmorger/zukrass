@@ -15,6 +15,9 @@ module.exports = {
     script: [
       { src: 'https://cdn.polyfill.io/v2/polyfill.js?features=String.prototype.includes,Array.prototype.find,Object.assign,Promise' }
     ],
+    script: [
+      { src: 'https://cdn.polyfill.io/v2/polyfill.min.js' }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', type: 'image/x-icon', href: '/favicon.png' },
