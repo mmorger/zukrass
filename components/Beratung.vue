@@ -40,3 +40,16 @@ export default {
   }
 }
 </script>
+<style>
+    .v-collapse-content{
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .v-collapse-content-end{
+        transition: max-height 0.3s ease-in;
+        max-height: 500px;
+    }
+</style>

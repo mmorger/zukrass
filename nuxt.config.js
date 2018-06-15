@@ -2,15 +2,18 @@ module.exports = {
   /*
   ** Headers of the page
   */
-  head: {
-    title: 'zukrass',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' },
-      { name: 'msapplication-TileColor', content: '#ffffff' },
-      { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
-      { name: 'theme-color', content: '#ffffff' }
+ head: {
+   title: 'zukrass',
+   meta: [
+     { charset: 'utf-8' },
+     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+     { hid: 'description', name: 'description', content: 'Nuxt.js project' },
+     { name: 'msapplication-TileColor', content: '#ffffff' },
+     { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
+     { name: 'theme-color', content: '#ffffff' }
+    ],
+    script: [
+      { src: 'https://cdn.polyfill.io/v2/polyfill.js?features=String.prototype.includes,Array.prototype.find,Object.assign,Promise' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -32,16 +35,13 @@ module.exports = {
       { rel: 'manifest', href: '/manifest.json' }
     ]
   },
-  modules: [
-
-  ],
-  css: [
-    '@/assets/css/styles.scss'
-  ],
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  css: [
+    '@/assets/css/styles.scss'
+  ],
   /*
   ** Build configuration
   */
@@ -49,7 +49,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -61,11 +61,9 @@ module.exports = {
     }
   },
   plugins: [
-    { src: '~plugins/collapse', ssr: false},
+    { src: '~/plugins/collapse', ssr: false },
     { src: '~/plugins/flickity', ssr: false },
     { src: '~/plugins/v-clipboard', ssr: false },
-    { src: '~plugins/ga.js', ssr: false }
-    //{ src: '~plugins/es6promise.js', ssr: false }
-    //{ src: '~plugins/vue-analytics.js', ssr: false }
+    { src: '~/plugins/ga.js', ssr: false }
   ]
 }
