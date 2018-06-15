@@ -13,8 +13,6 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
-    "core-js": "3.0.0-beta.3",
     "es6-promise": "^4.2.4",
     "node-sass": "^4.9.0",
     "nuxt": "^1.0.0",
