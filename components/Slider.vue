@@ -29,7 +29,26 @@ export default {
   methods: {
     vidClick(e) {
       this.$emit('vidClick', e.target)
+    },
+    pauseVideos() {
+      this.videos.forEach((element) => {
+        const vidContainer = this.$refs[element.vid][0]
+        if(vidContainer.querySelector('iframe') !== null) {
+          this.pauseOneVideo(vidContainer)
+        }
+      })
+    },
+    pauseOneVideo(element) {
+      const iframe = element.querySelector( 'iframe')
+      iframe.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
     }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      this.$refs.flickity.on( 'select',  () => {
+        this.pauseVideos()
+      }) 
+    })
   }
 }
 
