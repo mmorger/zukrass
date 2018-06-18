@@ -6,9 +6,12 @@
   Faq(:faq="faq")
   Videos(:videos="videos" @vidClick="vidClick($event)")
   div.footer.inner
-    ul
-      li 
-        a(v-bind:href="'https://www.youtube.com/channel/UCi8qR7Zub16b7jhC6fSJmgQ/videos?disable_polymer=1'" target="_blank") Zum Youtube-Kanal
+    ul.social
+      li
+        a(v-bind:href="'https://www.youtube.com/channel/UCi8qR7Zub16b7jhC6fSJmgQ/'" target="_blank" class="icon youtube") Youtube
+      li
+        a(v-bind:href="'https://www.youtube.com/channel/UCi8qR7Zub16b7jhC6fSJmgQ/'" target="_blank", class="icon facebook") Facebook
+    ul  
       li
         nuxt-link(to="impressum" class="about") Über die Kampagne
 
@@ -25,10 +28,10 @@ export default {
   data() {
     return {
       videos: [
-        {vid: 'K-n2nVjIzv8', url: 'image.jpg', claim: 'Min Fründ und ich händs super... solang ich nüt falsch mache', emoji_url: 'emoji_beziehung.png'},
-        {vid: '2YX9OH751qM', url: 'image.jpg', claim: 'Min Trainer betreut mich au no unter de Duschi', emoji_url: 'emoji_dusche.png'},
-        {vid: 'gqKBhXK6mus', url: 'image.jpg', claim: 'Usgang isch mega cool... lernsch immer neui Lüt kenne', emoji_url: 'emoji_ausgang.png'},
-        {vid: 'loOqgyTIdwo', url: 'image.jpg', claim: 'Min Vater macht mega vill im Huushalt... meischtens vill kaputt', emoji_url: 'emoji_familie.png'}
+        {vid: 'SS_rm0hZ8n4', url: 'image.jpg', claim: 'Min Fründ und ich händs super... solang ich nüt falsch mache', emoji_url: 'emoji_beziehung.png'},
+        {vid: 'ecQoSroAnQo', url: 'image.jpg', claim: 'Min Trainer betreut mich au no unter de Duschi', emoji_url: 'emoji_dusche.png'},
+        {vid: 'jm1KBJbm0Xw', url: 'image.jpg', claim: 'Usgang isch mega cool... lernsch immer neui Lüt kenne', emoji_url: 'emoji_ausgang.png'},
+        {vid: 'KWchIFtkfJ0', url: 'image.jpg', claim: 'Min Vater macht mega vill im Huushalt... meischtens vill kaputt', emoji_url: 'emoji_familie.png'}
 
       ],
       beratungsstellen: [

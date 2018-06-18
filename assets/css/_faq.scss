@@ -67,6 +67,8 @@
                     padding-bottom: 15px;
 
                     &::before {
+                        display: block;
+                        content: '#';
                         color: $color-green;
                         line-height: 1;
                     }

@@ -69,15 +69,6 @@ ul {
     padding: 0;
     list-style: none;
     text-align: center;
-
-
-    li {
-        &::before {
-            content: '#';
-            display: block;
-            color: $color-red;
-        }
-    }
 }
 
 .img-responsive {
@@ -159,7 +150,43 @@ ul {
         display: block;
         width: auto;
     }
+    ul.social {
+        margin-bottom: 60px;
+        @media #{$normal} {
+            margin-bottom: 80px;
+        }
+        li {
+            display: inline-block;
+            padding: 15px;
+            &::before {
+                content: '';
+            }
+            a {
+                &::before {
+                    content: '';
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 5px;
+                    width: 40px;
+                    height: 40px;
+                }
+                &.youtube {
+                    &::before {
+                    background: center center no-repeat url(/images/icon-yt.png);
+                    background-size: contain;
 
+                    }
+                } 
+                &.facebook {
+                    &::before {
+                    background: center center no-repeat url(/images/icon-fb.png);
+                    background-size: contain;
+                    }
+                } 
+            }
+        }       
+    }
 }
 
 
@@ -171,6 +198,14 @@ ul {
         max-width: 550px;
         @media #{$normal} {
             font-size: 20px;
+        }
+        li {
+            padding-bottom: 15px;
+            &::before {
+                content: '#';
+                display: block;
+                color: $color-red;
+            }
         }
     }
     .item {

@@ -6,25 +6,28 @@
         .youtube-player(:data-id="v.vid" @click="vidClick($event)" :ref="v.vid")
         h1 {{ v.claim }}
         .share
-          button(v-clipboard="'https://www.youtube.com/watch?v=' + v.vid", v-clipboard:success="clipboardSuccessHandler", v-clipboard:error="clipboardErrorHandler" class="button-share")
-          
-        
+          a.button(v-bind:href="'https://www.youtube.com/watch?v=' + v.vid", class="button-share", target="blank")
+              
 </template>
 
 <script>
 export default {
   props: ["videos"],
   methods: {
+    /*
     vidClick(e) {
       this.$emit('vidClick', e.target)
     },
     clipboardSuccessHandler ({ value, event }) {
-      console.log('success', value)
+      //console.log('success', value)
+      alert("Link des Videos kopiert. Mit Einfügen kannst du den Link teilen.")
     },
 
     clipboardErrorHandler ({ value, event }) {
-      console.log('error', value)
+      //console.log('error', value)
+      alert("Fehler. Der Link kann nicht geteilt werden.")
     }
+    */
   }
 }
 </script>
