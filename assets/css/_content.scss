@@ -157,11 +157,22 @@ ul {
         }
         li {
             display: inline-block;
-            padding: 15px;
+            padding: 10px;
+            min-width: 65px;
+
+            @media #{$normal} {
+                padding: 15px;
+                min-width: 85px;
+            }
+
             &::before {
                 content: '';
             }
             a {
+                font-size: 70%;
+                @media #{$normal} {
+                    font-size: 90%;
+                }                
                 &::before {
                     content: '';
                     display: block;
@@ -181,6 +192,12 @@ ul {
                 &.facebook {
                     &::before {
                     background: center center no-repeat url(/images/icon-fb.png);
+                    background-size: contain;
+                    }
+                } 
+                &.instagram {
+                    &::before {
+                    background: center center no-repeat url(/images/icon-insta.png);
                     background-size: contain;
                     }
                 } 

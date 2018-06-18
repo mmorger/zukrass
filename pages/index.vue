@@ -10,7 +10,9 @@
       li
         a(v-bind:href="'https://www.youtube.com/channel/UCi8qR7Zub16b7jhC6fSJmgQ/'" target="_blank" class="icon youtube") Youtube
       li
-        a(v-bind:href="'https://www.youtube.com/channel/UCi8qR7Zub16b7jhC6fSJmgQ/'" target="_blank", class="icon facebook") Facebook
+        a(v-bind:href="'https://www.facebook.com/zukrass.ch/'" target="_blank", class="icon facebook") Facebook
+      li
+        a(v-bind:href="'https://www.instagram.com/zukrass.ch/'" target="_blank", class="icon instagram") Instagram
     ul  
       li
         nuxt-link(to="impressum" class="about") Über die Kampagne
