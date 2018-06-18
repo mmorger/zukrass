@@ -13,6 +13,8 @@
 </template>
 
 <script>
+import MobileDetect from 'mobile-detect'
+
 export default {
   props: ["videos"],
 
@@ -23,7 +25,8 @@ export default {
         prevNextButtons: true,
         pageDots: true,
         wrapAround: true
-      }
+      },
+      isIOS: false
     }
   },
   methods: {
@@ -44,11 +47,16 @@ export default {
     }
   },
   mounted () {
-    this.$nextTick(() => {
-      this.$refs.flickity.on( 'select',  () => {
-        this.pauseVideos()
-      }) 
-    })
+    let md = new MobileDetect(window.navigator.userAgent)
+    if(md.mobile() === true && md.userAgent() === 'Safari') {
+      this.isIOS = true
+    } else {
+      this.$nextTick(() => {
+        this.$refs.flickity.on( 'select',  () => {
+          this.pauseVideos()
+        }) 
+      })
+    }
   }
 }
 
