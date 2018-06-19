@@ -30,10 +30,10 @@ export default {
   data() {
     return {
       videos: [
-        {vid: 'SS_rm0hZ8n4', url: 'image.jpg', claim: 'Min Fründ und ich händs super... solang ich nüt falsch mache', emoji_url: 'emoji_beziehung.png'},
-        {vid: 'ecQoSroAnQo', url: 'image.jpg', claim: 'Min Trainer betreut mich au no unter de Duschi', emoji_url: 'emoji_dusche.png'},
-        {vid: 'jm1KBJbm0Xw', url: 'image.jpg', claim: 'Usgang isch mega cool... lernsch immer neui Lüt kenne', emoji_url: 'emoji_ausgang.png'},
-        {vid: 'KWchIFtkfJ0', url: 'image.jpg', claim: 'Min Vater macht mega vill im Huushalt... meischtens vill kaputt', emoji_url: 'emoji_familie.png'}
+        {vid: '0ubWoo97piA', url: 'image.jpg', claim: 'Min Fründ und ich händs super... solang ich nüt falsch mache', emoji_url: 'emoji_beziehung.png'},
+        {vid: 'x878UBg7hiM', url: 'image.jpg', claim: 'Min Trainer betreut mich au no unter de Duschi', emoji_url: 'emoji_dusche.png'},
+        {vid: '_6kdqkgo6iY', url: 'image.jpg', claim: 'Usgang isch mega cool... lernsch immer neui Lüt kenne', emoji_url: 'emoji_ausgang.png'},
+        {vid: '9QC0DV_s2iM', url: 'image.jpg', claim: 'Min Vater macht mega vill im Huushalt... meischtens vill kaputt', emoji_url: 'emoji_familie.png'}
 
       ],
       beratungsstellen: [
