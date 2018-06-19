@@ -14,10 +14,11 @@
 export default {
   props: ["videos"],
   methods: {
-    /*
+    
     vidClick(e) {
       this.$emit('vidClick', e.target)
-    },
+    }
+    /*
     clipboardSuccessHandler ({ value, event }) {
       //console.log('success', value)
       alert("Link des Videos kopiert. Mit Einfügen kannst du den Link teilen.")

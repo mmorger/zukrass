@@ -33,6 +33,7 @@ export default {
     vidClick(e) {
       this.$emit('vidClick', e.target)
     },
+    
     pauseVideos() {
       this.videos.forEach((element) => {
         const vidContainer = this.$refs[element.vid][0]
@@ -45,7 +46,8 @@ export default {
       const iframe = element.querySelector( 'iframe')
       iframe.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
     }
-  },
+  }
+  /*
   mounted () {
     let md = new MobileDetect(window.navigator.userAgent)
     if(md.mobile() === true && md.userAgent() === 'Safari') {
@@ -58,6 +60,7 @@ export default {
       })
     }
   }
+  */
 }
 
 </script>
