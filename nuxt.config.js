@@ -9,8 +9,10 @@ module.exports = {
      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
      { hid: 'description', name: 'description', content: 'Viele Jugendliche erleben körperliche, sexuelle oder psychische Gewalt. Die Kampagne «zukrass.ch» der Kantonalen Opferhilfestelle Zürich zeigt Opfern von Gewalt, wo sie kostenlose, vertrauliche und anonyme Hilfe finden.' },
      { name: 'og:description', property: 'og:description', content: 'Viele Jugendliche erleben körperliche, sexuelle oder psychische Gewalt. Die Kampagne «zukrass.ch» der Kantonalen Opferhilfestelle Zürich zeigt Opfern von Gewalt, wo sie kostenlose, vertrauliche und anonyme Hilfe finden.' },
-     { name: 'og:image', property: 'og:image', content: 'https://www.zukrass.ch/images/thumb_zukrass.png' },
-     { name: 'og:title', property: 'og:title', content: 'zukrass' },
+     { name: 'twitter:card', content: "summary" },
+     { name: 'twitter:site', content: "@zukrassC" },
+     { name: 'twitter:title', content: "#zukrass" },
+     { name: 'twitter:description', content: "Zukrass.ch ist eine Kampagne der Kantonalen Opferhilfestelle des Kantons Zürich" },
      { name: 'msapplication-TileColor', content: '#ffffff' },
      { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
      { name: 'theme-color', content: '#ffffff' }
