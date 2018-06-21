@@ -26,7 +26,7 @@ export default {
         pageDots: true,
         wrapAround: true
       },
-      isIOS: false
+      isMobile: false
     }
   },
   methods: {
@@ -46,12 +46,11 @@ export default {
       const iframe = element.querySelector( 'iframe')
       iframe.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
     }
-  }
-  /*
+  },
   mounted () {
     let md = new MobileDetect(window.navigator.userAgent)
-    if(md.mobile() === true && md.userAgent() === 'Safari') {
-      this.isIOS = true
+    if(md.mobile()) {
+      this.isMobile = true
     } else {
       this.$nextTick(() => {
         this.$refs.flickity.on( 'select',  () => {
@@ -60,7 +59,6 @@ export default {
       })
     }
   }
-  */
 }
 
 </script>
