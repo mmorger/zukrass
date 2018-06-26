@@ -201,6 +201,12 @@ ul {
                     background-size: contain;
                     }
                 } 
+                &.twitter {
+                    &::before {
+                    background: center center no-repeat url(/images/icon-twitter.png);
+                    background-size: contain;
+                    }
+                } 
             }
         }       
     }

@@ -13,6 +13,8 @@
         a(v-bind:href="'https://www.facebook.com/zukrass.ch/'" target="_blank", class="icon facebook") Facebook
       li
         a(v-bind:href="'https://www.instagram.com/zukrass.ch/'" target="_blank", class="icon instagram") Instagram
+      li
+        a(v-bind:href="'https://twitter.com/ZukrassC/'" target="_blank", class="icon twitter") Twitter
     ul  
       li
         nuxt-link(to="impressum" class="about") Über die Kampagne
