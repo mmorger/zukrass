@@ -84,7 +84,22 @@ export default {
         a: [
         'Ja, wenn Du uns nicht selber anrufen willst, kann das eine Freundin oder ein Freund für Dich machen.', 
         'Wir werden mit ihr/ihm besprechen, wie sie/er Dir helfen kann.',
-        'Wer uns anruft, muss seinen Namen nicht nennen, er/sie kann das anonym machen.']}
+        'Wer uns anruft, muss seinen Namen nicht nennen, er/sie kann das anonym machen.']},
+        {q:'Kann eine Freundin oder ein Freund für mich anrufen?', 
+        a: [
+        'Hier findest Du die Adressen aller <a href="http://www.sodk.ch/fileadmin/user_upload/Fachbereiche/Opferhilfe/Adresslisten/2018.06.06_OH-Beratungsstellen_Kinder_und_Jugend.pdf">Opferberatungsstellen in der Schweiz.</a>']}
+      ],
+      faqx: [
+        { question:'Kann eine Freundin oder ein Freund für mich anrufen?', 
+        answer: [ 
+          { a: 'Ja, wenn Du uns nicht selber anrufen willst, kann das eine Freundin oder ein Freund für Dich machen.'}, 
+          { a: 'Wir werden mit ihr/ihm besprechen, wie sie/er Dir helfen kann.'},
+          { a: 'Wer uns anruft, muss seinen Namen nicht nennen, er/sie kann das anonym machen.'}]
+        },
+        { question:'Kann eine Freundin oder ein Freund für mich anrufen?', 
+        answer: [ 
+          { a: 'Hier findest Du die Adressen aller <a href="http://www.sodk.ch/fileadmin/user_upload/Fachbereiche/Opferhilfe/Adresslisten/2018.06.06_OH-Beratungsstellen_Kinder_und_Jugend.pdf">Opferberatungsstellen in der Schweiz.</a>'}]
+        }
       ]
     }
   },
