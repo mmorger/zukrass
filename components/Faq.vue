@@ -7,7 +7,7 @@
           h3.title(v-collapse-toggle) {{ qa.q }}
           .content(v-collapse-content) 
             ul
-              li(v-for="item in qa.a") {{ item }}
+              li(v-for="item in qa.a" v-html="item")
 </template>
 
 <script>

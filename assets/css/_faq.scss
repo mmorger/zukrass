@@ -73,6 +73,18 @@
                         line-height: 1;
                     }
 
+                    a {
+                       // text-decoration: underline;
+                        border-bottom: 1px solid black;
+
+                        @media #{$normal} {
+                            &:hover {
+                                opacity: 1;
+                                color: $color-green;
+                                border-bottom: 1px solid $color-green;
+                            }
+                        }
+                    }
                 }
             }
 
